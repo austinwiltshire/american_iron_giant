@@ -1,0 +1,36 @@
+# .env
+# Instructions: Fill in the fields with your information and rename this file to ".env" with the dot
+
+# Token given by discord for your bot
+DISCORD_TOKEN=XXX
+
+# Guild is the same thing as server and used in the bot api
+DISCORD_GUILD=""
+
+# The channel to monitor for images
+CHANNEL=""
+
+# Email you're sending tar'd images from. You need to have access to this email address obviously
+FROM_EMAIL=""
+
+# Email you're sending tar'd images to
+TO_EMAIL=""
+
+# Username for your SMTP server
+SMTP_USERNAME=""
+
+# Password for your SMTP server. If using proton, remember that you need proton bridge which will give you a temporary
+# email.
+SMTP_PASSWORD=""
+
+# SMTP host for your email. If using proton bridge, this is localhost.
+SMTP_HOST=""
+
+# SMTP port for your email. Proton bridge will tell you this
+SMTP_PORT=
+
+# Name of the directory to put sent images in. You can always delete them manually later.
+ARCHIVE_DIRECTORY="archive"
+
+# Name of the directory to put downloaded images in that are waiting to be tar'd and sent
+DOWNLOAD_DIRECTORY="downloads"
