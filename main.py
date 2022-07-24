@@ -35,9 +35,6 @@ async def flush_image_directory() -> None:
     """
     await client.wait_until_ready()
 
-    # guild = discord.utils.get(client.guilds, name=GUILD)
-    # general_channel = discord.utils.get(guild.channels, name="general")
-
     while True:
 
         # get tomorrow at 1am
@@ -76,7 +73,7 @@ async def flush_image_directory() -> None:
 
         move_files(DOWNLOAD_DIRECTORY, os.getenv("ARCHIVE_DIRECTORY"))
 
-        logging.info("Successfully emailed and ")
+        logging.info("Successfully emailed and moved to archive")
 
 
 client.loop.create_task(flush_image_directory())

@@ -4,6 +4,7 @@ File handling helpers for American Iron Giant
 import os
 import shutil
 import tarfile
+import posixpath
 
 
 def move_files(source: str, destination: str) -> None:
@@ -32,15 +33,13 @@ def tar_up(directory: str, name: str) -> str:
     :param name: Name of the resultant archive without any file type (i.e., .tar, .gz)
     :return: The name of the tarred up file
     """
-
-    # TODO: assert that there's no filetype for filename
+    assert not posixpath.splitext(name)[-1], "Name of file should not have any extension"
 
     filename = name + ".tar.gz"
 
     tar = tarfile.open(filename, "w:gz")
 
-    # TODO: get the first part of the filename and use that as the archive name
-    tar.add(directory, arcname="Images")
+    tar.add(directory, arcname=name)
     tar.close()
 
     return filename

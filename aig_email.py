@@ -54,7 +54,6 @@ class SMTPServer:
     hostname: str
     port: int
 
-    # TODO: be nice to make this async
     def send(self, email: Email) -> None:
         """
         Send email_message using this server.

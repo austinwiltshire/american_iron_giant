@@ -29,7 +29,7 @@ class Url:
         return parse.urlparse(self.full_url).path
 
     @property
-    def file_name(self):
+    def file_name(self) -> str:
         """
         From www.example.com/path/to/file.gz we extract file.gz
 
@@ -102,7 +102,6 @@ def download_image(img_url: Url, download_directory: str) -> None:
     :param img_url: A url, assumed to be an image, to download
     :param download_directory: The directory (relative to .) to download to. If it doesn't exist, we'll create it.
     """
-    # TODO: pull out this file getting logic into some common lib that both this and the reddit scraper can use
     if not os.path.exists(download_directory):
         os.mkdir(download_directory)
 

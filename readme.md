@@ -5,3 +5,20 @@ This repo houses a bot that assists the American Iron Front discord server.
 Currently, it:
 - Scrapes images from the protest-pictures channel and emails them for analysis
 
+To install:
+
+```
+git clone git@github.com:austinwiltshire/american_iron_giant.git
+cd american_iron_giant
+pip -r requirements.txt
+```
+
+You'll need to fill in the `env_template` file with your Discord and SMTP credentials, then rename it to `.env`.
+
+To run:
+
+```
+python main.py
+```
+
+Logging will go to the screen.
