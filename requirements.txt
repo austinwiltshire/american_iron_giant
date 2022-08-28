@@ -52,3 +52,4 @@ websockets==10.3
 wrapt==1.14.1
 yarl==1.7.2
 zipp==3.8.0
+git+https://github.com/austinwiltshire/aif_grimoire@master#egg=aif_grimoire
