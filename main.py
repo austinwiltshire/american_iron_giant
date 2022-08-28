@@ -11,9 +11,9 @@ import os
 import discord
 from dotenv import load_dotenv
 
-from aig_email import Email, SMTPServer
-from aig_os import move_files, tar_up
-from web import get_urls, is_image, download_image
+from aif_grimoire.aif_email import Email, SMTPServer
+from aif_grimoire.aif_os import move_files, tar_up
+from aif_grimoire.web import get_urls, is_image, download_image
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
